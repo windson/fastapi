@@ -55,6 +55,12 @@ python -m pip install -U pip
 pip install -r requirements.txt
 ```
 
+If you want to use sqlite then install databases module for sqlite as follows
+
+```shell
+pip install databases[sqlite]
+```
+
 ## Run this app on Local PC
 In command terminal run the following command
 ```shell
