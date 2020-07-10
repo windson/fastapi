@@ -2,9 +2,9 @@
 
 FastAPI with Async REST API with PostgreSQL on Azure App Service 
 
-Detailed Tutorial
-- Development [Implementing Async REST APIs in FastAPI with PostgreSQL CRUD](https://www.tutlinks.com/fastapi-with-postgresql-crud-async/, 'Implementing Async REST APIs in FastAPI with PostgreSQL CRUD')
-- Deployment 
+Detailed Tutorials on Development & Deployment
+- Development: [Implementing Async REST APIs in FastAPI with PostgreSQL CRUD](https://www.tutlinks.com/fastapi-with-postgresql-crud-async/, 'Implementing Async REST APIs in FastAPI with PostgreSQL CRUD')
+- Deployment [Deploy FastAPI on Azure App Service](https://bit.ly/3gPntQ7)
 
 ## Setup this Repo on Local PC
 
