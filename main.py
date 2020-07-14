@@ -74,14 +74,14 @@ async def update_note(note_id: int, payload: NoteIn):
     return {**payload.dict(), "id": note_id}
 
 @app.get("/notes/", response_model=List[Note])
-async def read_notes():
-    query = notes.select()
+async def read_notes(skip: int = 0, take: int = 20):
+    query = notes.select().offset(skip).limit(take)
     return await database.fetch_all(query)
 
-@app.get("/notes/{note_id}/", response_model=List[Note])
+@app.get("/notes/{note_id}/", response_model=Note)
 async def read_notes(note_id: int):
     query = notes.select().where(notes.c.id == note_id)
-    return await database.fetch_all(query)
+    return await database.fetch_one(query)
 
 @app.delete("/notes/{note_id}/")
 async def update_note(note_id: int):
