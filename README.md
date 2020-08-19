@@ -8,6 +8,14 @@ Detailed Tutorials on Development & Deployment
 - Deployment [Deploy FastAPI on Azure App Service](https://bit.ly/3gPntQ7, 'Deploy FastAPI on Azure App Service')
 
 
+
+| Code 💻 | Video 📺 | Article 📝 |
+|----------|-------------|------|
+| [FastAPI CRUD Async PostgreSQL](https://github.com/windson/fastapi/tree/fastapi-postgresql-azure-deploy) | [Implementing Async REST APIs in Python using FastAPI with PostgreSQL CRUD](https://bit.ly/3j42qvf) | [Implementing Async REST APIs in FastAPI with PostgreSQL CRUD](https://bit.ly/2O6onvp) |
+| [Deploy FastAPI on Azure](https://github.com/windson/fastapi/tree/fastapi-postgresql-azure-deploy) | - | [Deploy FastAPI with CRUD + PostgreSQL on Azure App Service](https://bit.ly/3gPntQ7) |
+| [FastAPI CRUD Async PostgreSQL](https://github.com/windson/fastapi/tree/fastapi-postgresql-azure-deploy) | - | [Debug FastAPI in VS Code IDE](https://bit.ly/3hcXToY) |
+
+
 ## Setup this Repo on Local PC
 
 In `main.py` comment the following line
