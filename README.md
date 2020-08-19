@@ -1,4 +1,4 @@
-# Deploy FastAPI on Google Cloud Platform Google App Engine
+# Deploy FastAPI on Google Cloud Platform (Google App Engine) ☁ 
 
 
 | Code 💻 | Video 📺 | Article 📝 |
