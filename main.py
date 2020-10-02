@@ -84,7 +84,7 @@ async def read_notes(note_id: int):
     return await database.fetch_one(query)
 
 @app.delete("/notes/{note_id}/", status_code = status.HTTP_200_OK)
-async def update_note(note_id: int):
+async def delete_note(note_id: int):
     query = notes.delete().where(notes.c.id == note_id)
     await database.execute(query)
     return {"message": "Note with id: {} deleted successfully!".format(note_id)}
