@@ -9,11 +9,11 @@ Detailed Tutorials on Development & Deployment
 
 
 
-| Code 💻 | Video 📺 | Article 📝 |
+|  Article 📝 | Video 📺 | Code 💻 |
 |----------|-------------|------|
-| [FastAPI CRUD Async PostgreSQL](https://github.com/windson/fastapi/tree/fastapi-postgresql-azure-deploy) | [Implementing Async REST APIs in Python using FastAPI with PostgreSQL CRUD](https://bit.ly/3j42qvf) | [Implementing Async REST APIs in FastAPI with PostgreSQL CRUD](https://bit.ly/2O6onvp) |
-| [Deploy FastAPI on Azure](https://github.com/windson/fastapi/tree/fastapi-postgresql-azure-deploy) | - | [Deploy FastAPI with CRUD + PostgreSQL on Azure App Service](https://bit.ly/3gPntQ7) |
-| [FastAPI CRUD Async PostgreSQL](https://github.com/windson/fastapi/tree/fastapi-postgresql-azure-deploy) | - | [Debug FastAPI in VS Code IDE](https://bit.ly/3hcXToY) |
+| [Implementing Async REST APIs in FastAPI with PostgreSQL CRUD](https://bit.ly/2O6onvp) | [Implementing Async REST APIs in Python using FastAPI with PostgreSQL CRUD](https://bit.ly/3j42qvf) | [FastAPI CRUD Async PostgreSQL](https://github.com/windson/fastapi/tree/fastapi-postgresql-azure-deploy) |
+| [Deploy FastAPI with CRUD + PostgreSQL on Azure App Service](https://bit.ly/3gPntQ7) | [How to Deploy FastAPI on Azure App Service in just 30 minutes](https://bit.ly/2HA6SUj) | [Deploy FastAPI on Azure](https://github.com/windson/fastapi/tree/fastapi-postgresql-azure-deploy) |
+| [Debug FastAPI in VS Code IDE](https://bit.ly/3hcXToY) | - | [FastAPI CRUD Async PostgreSQL](https://github.com/windson/fastapi/tree/fastapi-postgresql-azure-deploy) |
 
 
 ## Setup this Repo on Local PC
@@ -56,14 +56,27 @@ python -m pip install -U pip
 pip install -r requirements.txt
 ```
 
-### Linux Users
+### CentOS Users Setup PIP3 and Virtual Environment
 In command terminal run the following command
 ```shell
+apt install python3-venv
 python3 -m venv env
 source ./env/bin/activate
 python -m pip install -U pip
 pip install -r requirements.txt
 ```
+
+### Ubuntu Users Setup PIP3 and Virtual Environment
+In command terminal run the following command
+```shell
+sudo apt install python3-pip
+sudo pip3 install virtualenv
+virtualenv env
+source ./env/bin/activate
+python -m pip install -U pip
+pip install -r requirements.txt
+```
+
 
 If you want to use sqlite then install databases module for sqlite as follows
 
