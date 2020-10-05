@@ -1,6 +1,9 @@
-# Deploy FastAPI on Azure
+# Deploy FastAPI on Ubuntu and Serve using Caddy 2 Web Server
 
-FastAPI with Async REST API with PostgreSQL on Azure App Service 
+FastAPI with Async REST API with PostgreSQL on Ubuntu and Serve using Caddy 2 Web Server
+
+
+
 
 Detailed Tutorials on Development & Deployment
 - Development: [Implementing Async REST APIs in FastAPI with PostgreSQL CRUD](https://www.tutlinks.com/fastapi-with-postgresql-crud-async/, 'Implementing Async REST APIs in FastAPI with PostgreSQL CRUD')
@@ -56,7 +59,7 @@ python -m pip install -U pip
 pip install -r requirements.txt
 ```
 
-### CentOS Users Setup PIP3 and Virtual Environment
+### Install Virtual Environment
 In command terminal run the following command
 ```shell
 apt install python3-venv
@@ -65,18 +68,6 @@ source ./env/bin/activate
 python -m pip install -U pip
 pip install -r requirements.txt
 ```
-
-### Ubuntu Users Setup PIP3 and Virtual Environment
-In command terminal run the following command
-```shell
-sudo apt install python3-pip
-sudo pip3 install virtualenv
-virtualenv env
-source ./env/bin/activate
-python -m pip install -U pip
-pip install -r requirements.txt
-```
-
 
 If you want to use sqlite then install databases module for sqlite as follows
 
