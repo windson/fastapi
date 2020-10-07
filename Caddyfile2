@@ -1,0 +1,16 @@
+# Caddyfile for Caddy 2 version
+# Author: Navule Pavan Kumar Rao
+# www.tutlinks.com
+# This file is referenced from official repo of TutLinks.com
+# https://github.com/windson/fastapi/tree/fastapi-postgresql-caddy-ubuntu-deploy/
+# Subscribe to TutLinks channel on YouTube: http://bit.ly/2Uc0YNk
+example.com:443 {
+    reverse_proxy 127.0.0.1:8000 {
+        header_up Host {http.request.host}
+        header_up X-Real-IP {http.request.remote}
+        header_up X-Forwarded-For {http.request.remote}
+        header_up X-Forwarded-Port {http.request.port}
+        header_up X-Forwarded-Proto {http.request.scheme}
+    }
+    tls u@me.com
+}
