@@ -13,4 +13,11 @@ example.com:443 {
         header_up X-Forwarded-Proto {http.request.scheme}
     }
     tls u@me.com
+    log {
+        output file /var/log/caddy/access.log {
+                roll_size 1mb
+                roll_keep 4
+                roll_keep_for 24h
+        }
+    }
 }
