@@ -7,4 +7,6 @@ sudo apt install -y caddy
 
 caddy version
 
+sudo mkdir -p /var/log/caddy && sudo chown caddy:caddy /var/log/caddy
+
 
