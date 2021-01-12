@@ -11,23 +11,17 @@
 # https://github.com/windson/fastapi/blob/fastapi-gunicorn-socket-deployment/gunicorn.service
 # Subscribe to TutLinks channel on YouTube: http://bit.ly/2Uc0YNk
 #
-
 [Unit]
-Description=Gunicorn Web Server as Unit Service Systemd - TutLinks.com
-Requires=gunicorn.socket
-After=network.target
+Description=gunicorn socket
 
-[Service]
-Type=notify
-User=windson
-Group=windson
-WorkingDirectory=/home/windson/fastapi
-Environment="PATH=/home/windson/fastapi/env/bin"
-ExecStart=/home/windson/fastapi/env/bin/gunicorn --config /home/windson/fastapi/gunicorn.py main:app
-ExecReload=/bin/kill -s HUP $MAINPID
-KillMode=mixed
-TimeoutStopSec=5
-PrivateTmp=true
+[Socket]
+ListenStream=/run/gunicorn.sock
+# Our service won't need permissions for the socket, since it
+# inherits the file descriptor by socket activation
+# only the nginx daemon will need access to the socket
+User=www-data
+# Optionally restrict the socket permissions even more.
+# Mode=600
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=sockets.target

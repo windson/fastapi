@@ -2,10 +2,10 @@
 # Author: Navule Pavan Kumar Rao
 # www.tutlinks.com
 # This file is referenced from official repo of TutLinks.com
-# https://github.com/windson/fastapi/tree/fastapi-postgresql-caddy-ubuntu-deploy/
+# https://github.com/windson/fastapi/tree/fastapi-gunicorn-socket-deployment/
 # Subscribe to TutLinks channel on YouTube: http://bit.ly/2Uc0YNk
 example.com:443 {
-    reverse_proxy 127.0.0.1:8000 {
+     reverse_proxy unix//run/gunicorn.sock {
         header_up Host {http.request.host}
         header_up X-Real-IP {http.request.remote}
         header_up X-Forwarded-For {http.request.remote}
@@ -13,4 +13,11 @@ example.com:443 {
         header_up X-Forwarded-Proto {http.request.scheme}
     }
     tls u@me.com
+    log {
+        output file /var/log/caddy/access.log {
+                roll_size 1mb
+                roll_keep 4
+                roll_keep_for 24h
+        }
+    }
 }
