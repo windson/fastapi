@@ -3,6 +3,7 @@ import databases
 import sqlalchemy
 from fastapi import FastAPI, status
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.middleware.gzip import GZipMiddleware
 from pydantic import BaseModel
 import os
 import urllib
@@ -52,6 +53,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"]
 )
+app.add_middleware(GZipMiddleware)
 
 @app.on_event("startup")
 async def startup():
