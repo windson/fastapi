@@ -1,6 +1,6 @@
 # FastAPI Tutorials
 
-Author: Navule Pavan Kumar Rao [🔗](https://bit.ly/3d17tZP)
+Author: Navule Pavan Kumar Rao [🤵](https://bit.ly/3d17tZP)
 
 | Code 💻 | Video 📺 | Article 📝 |
 |----------|-------------|------|
