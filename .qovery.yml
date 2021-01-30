@@ -1,0 +1,11 @@
+---
+application:
+  name: "fastapi"
+  project: "crazy-kudos"
+  organization: "QoveryCommunity"
+routers:
+- name: "main-fastapi"
+  routes:
+  - application_name: "fastapi"
+    paths:
+    - "/*"
