@@ -59,4 +59,4 @@ jobs:
         with:
           app-name: 'fastapi-srvc'
           slot-name: 'production'
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_1361b2e5e77346b9b77c4577c62cb96c }}
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_3ecad809485d4b61ab1bbb61a1abe8cd }}
