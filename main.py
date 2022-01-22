@@ -7,6 +7,4 @@ app = FastAPI()
 
 @app.get("/")
 def home():
-   
-
     return {  os.environ["LineChannelAccessToken"] }
