@@ -26,5 +26,10 @@ async def callback(request: Request, x_line_signature: str = Header(None)):
 
 @handler.add(event=MessageEvent, message=TextMessage)
 def handle_message(event):
-    msg = TextSendMessage(text=f'你輸入了: {event.message.text}')
-    line_bot_api.reply_message(event.reply_token, msg)
+    
+    if event.message.text == '不愧是低們哥':
+        msg = TextSendMessage('沒有低們哥就沒有今天的我')
+        line_bot_api.reply_message(event.reply_token, msg)
+    else:
+        msg = TextSendMessage(text=f'你輸入了: {event.message.text}')
+        line_bot_api.reply_message(event.reply_token, msg)
