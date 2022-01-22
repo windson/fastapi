@@ -15,8 +15,8 @@ app = FastAPI()
 
 load_dotenv()
 
-line_bot_api = LineBotApi(os.getenv('LINE_CHANNEL_ACCESS_TOKEN'))
-handler = WebhookHandler(os.getenv('LINE_CHANNEL_SECRET'))
+line_bot_api = LineBotApi(os.getenv('LineChannelAccessToken'))
+handler = WebhookHandler(os.getenv('LineChannelSecret'))
 
 def get_message(request: MessageRequest):
     for pattern, skill in skills.items():
