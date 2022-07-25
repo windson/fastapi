@@ -10,7 +10,7 @@ mccabe==0.6.1
 pydantic==1.6.2
 pylint==2.4.4
 six==1.14.0
-starlette==0.12.9
+starlette==0.14.2
 uvicorn==0.11.7
 websockets==9.1
 wrapt==1.11.2
