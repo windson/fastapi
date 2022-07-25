@@ -12,6 +12,6 @@ pylint==2.4.4
 six==1.14.0
 starlette==0.14.2
 uvicorn==0.11.7
-websockets==9.1
+websockets==8.1
 wrapt==1.11.2
 uvloop==0.14.0
