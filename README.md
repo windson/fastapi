@@ -2,6 +2,9 @@
 
 Author: Navule Pavan Kumar Rao [🤵](https://bit.ly/3d17tZP)
 
+[![Twitter Follow](https://img.shields.io/twitter/follow/tutlinksdotcom?style=social)](https://twitter.com/tutlinksdotcom)
+[![YouTube Channel](https://img.shields.io/badge/YouTube-Subscribe-red)](http://bit.ly/2Uc0YNk)
+
 | Code 💻 | Video 📺 | Article 📝 |
 |----------|-------------|------|
 | [Deploy FastAPI on GCP](https://github.com/windson/fastapi/tree/fastapi-deploy-google-cloud-platform) | [Deploy FastAPI Python app to Google Cloud Platform on App Engine](https://bit.ly/3g0VwFE) | [Deploy FastAPI app on Google Cloud Platform](https://bit.ly/3axKog8) |
