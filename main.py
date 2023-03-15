@@ -1,6 +1,7 @@
 from typing import List
 import databases
 import sqlalchemy
+from contextlib import asynccontextmanager
 from fastapi import FastAPI, status
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -45,7 +46,15 @@ class Note(BaseModel):
     text: str
     completed: bool
 
-app = FastAPI(title="REST API using FastAPI PostgreSQL Async EndPoints")
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Connect to DB
+    database.connect()
+    yield
+    # Release the DB Connection
+    await database.disconnect()
+
+app = FastAPI(title="REST API using FastAPI PostgreSQL Async EndPoints", lifespan=lifespan)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -53,14 +62,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"]
 )
-
-@app.on_event("startup")
-async def startup():
-    await database.connect()
-
-@app.on_event("shutdown")
-async def shutdown():
-    await database.disconnect()
 
 @app.post("/notes/", response_model=Note, status_code = status.HTTP_201_CREATED)
 async def create_note(note: NoteIn):
